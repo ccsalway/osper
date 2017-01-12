@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osper</title>
+    <style>
+        table {border-spacing: 8px;}
+    </style>
+</head>
+
+<body>
+<h3>CARDS</h3>
+{% if cards %}
+    <table>
+    <tr>
+        <th>Owner</th>
+        <th>Card No.</th>
+        <th>Balance</th>
+        <th></th>
+    </tr>
+    {% for card in cards %}
+    <tr>
+        <td>{{ card.owner }}</td>
+        <td>xxxx xxxx xxxx {{ card.tail }}</td>
+        <td>{{ card.balance }}</td>
+        <td><button type="button" onclick="window.location='/topup?id={{ card.cardid }}'">TOPUP</button></td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+</body>
+</html>

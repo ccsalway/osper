@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Osper</title>
+    <style>
+        label {min-width: 100px; display:inline-block;}
+    </style>
+</head>
+
+<body>
+<h3>LOGIN</h3>
+<form method="post" action="/login">
+    <div>
+        <label>Email</label>
+        <input type="text" name="un" placeholder="Email" value="{{ username }}">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" name="pw" placeholder="Password">
+    </div>
+    <button type="submit">Submit</button>
+    {% if error %}<div>{{ error }}</div>{% endif %}
+</form>
+</body>
+</html>

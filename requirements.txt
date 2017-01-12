@@ -1,0 +1,6 @@
+Flask>=0.12
+Jinja2>=2.9.4
+cffi>=1.9.1
+bcrypt>=3.1.2
+braintree>=3.33.0
+pyOpenSSL>=16.2.0
